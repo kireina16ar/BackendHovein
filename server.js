@@ -20,7 +20,8 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(Router);
-app.listen(8000, () => console.log("server started on port http://localhost:8000"))
+
+// app.listen(8000, () => console.log("server started on port http://localhost:8000"))
 
 app.get('/', (req, res) => {
   res.status(200).json('Welcome, your app is working well');
@@ -40,5 +41,5 @@ app.get('/', (req, res) => {
 // require("./app/routes/hovein.route")(app);
 
 
-// const PORT = process.env.PORT || 8000;
-// app.listen(PORT, () => console.log(`server started on port http://localhost:${PORT}`));
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, () => console.log(`server started on port http://localhost:${PORT}`));
