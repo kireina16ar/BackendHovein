@@ -22,6 +22,10 @@ app.use(express.json());
 app.use(Router);
 app.listen(8000, () => console.log("server started on port http://localhost:8000"))
 
+app.get('/', (req, res) => {
+  res.status(200).json('Welcome, your app is working well');
+})
+
 // // konek ke database
 //     // const mongooseConfig = {
 //     //     useNewUrlParser: true,
