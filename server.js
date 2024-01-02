@@ -21,25 +21,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(Router);
 
-// app.listen(8000, () => console.log("server started on port http://localhost:8000"))
-
-app.get('/', (req, res) => {
-  res.status(200).json('Welcome, your app is working well');
-})
-
-// // konek ke database
-//     // const mongooseConfig = {
-//     //     useNewUrlParser: true,
-//     //     useUnifiedTopology: true
-//     // }
-
-//     // db.mongoose.connect(db.url, mongooseConfig);
-// connectDB()
-
-
-// // memanggil routes etalase
-// require("./app/routes/hovein.route")(app);
-
-
 const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => console.log(`server started on port http://localhost:${PORT}`));
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
